@@ -1,0 +1,18 @@
+<div class=" w-full">
+    <div class="border-2 border-slate-200 rounded-md w-[350px]">
+        <div class="m-6">
+            <h1 class="font-bold text-[26px] font-serif mb-3">My Favorite Subject</h1>
+            <div *ngFor="let subjectList of subject_list | sortAZ:'subjectName' ">
+                <button 
+                (click)="sendingObject(subjectList.subjectName)"
+                 class="pl-2 flex flex-row bg-slate-200 rounded-md mb-4 py-3 w-[300px]">
+                    <img 
+                    class="w-6 mr-1"
+                    src="{{subjectList.thumbnail}}" alt="">
+                    <span>{{subjectList.subjectName}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <ng-content select=".logoutBtn"></ng-content>
+</div>

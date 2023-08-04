@@ -1,0 +1,10 @@
+.bg-linear{
+    height: 100vh;
+    background: rgb(140,92,246);
+    background: linear-gradient(90deg, rgba(140,92,246,1) 49%, rgba(215,70,239,1) 100%);
+} 
+
+.loginBtn{
+    background: rgb(240,93,127);
+    background: linear-gradient(90deg, rgba(240,93,127,1) 44%, rgba(246,138,69,1) 100%);
+}

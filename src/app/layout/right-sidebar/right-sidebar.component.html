@@ -1,0 +1,36 @@
+<div class=" w-full">
+    <div class="border-2 border-slate-200 rounded-md w-[85%] h-[500px]">
+        
+        <div class="m-6">
+            <span class="font-bold text-[26px] font-serif">{{dataFromLeftSideBar[0]?.subjectName}}</span>
+            <div class="mb-8">
+                {{dataFromLeftSideBar[0]?.description}}
+            </div>
+
+            <div class="grid grid-cols-2">
+                <div class="col-span-1">
+                    <ng-container [ngTemplateOutlet]="staticDoc"></ng-container>
+                </div>
+                <div class="col-span-1 w-full h-auto flex justify-center">
+                    <img 
+                    class="w-[300px] h-[300px] "
+                    src="{{dataFromLeftSideBar[0]?.thumbnail}}" alt="">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <ng-content select=".logoutBtn"></ng-content>
+</div>
+
+
+<ng-template #staticDoc>
+    <span class="font-bold text-[24px] font-serif">We invest in the world's potential</span>
+    <ul class="mt-8" style="list-style-type: none;">
+        <li style="background-image: url('../../../assets/images/checkbox.png'); background-repeat: no-repeat; background-position: left center; background-size: 35px; padding-left: 30px; line-height: 24px; margin-bottom: 6px;"><span class="ml-4">Dynamic reports and dashboards</span></li>
+        <li style="background-image: url('../../../assets/images/checkbox.png'); background-repeat: no-repeat; background-position: left center; background-size: 35px; padding-left: 30px; line-height: 24px; margin-bottom: 6px;"><span class="ml-4">Templates for everyonassade</span></li>
+        <li style="background-image: url('../../../assets/images/checkbox.png'); background-repeat: no-repeat; background-position: left center; background-size: 35px; padding-left: 30px; line-height: 24px; margin-bottom: 6px;"><span class="ml-4">Development workflow</span></li>
+        <li style="background-image: url('../../../assets/images/checkbox.png'); background-repeat: no-repeat; background-position: left center; background-size: 35px; padding-left: 30px; line-height: 24px; margin-bottom: 6px;"><span class="ml-4">Limitless bussiness automation</span></li>
+    </ul>
+</ng-template>
